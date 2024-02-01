@@ -4,7 +4,7 @@ pipeline {
             label 'AGENT-1'
         }
     }
-    enviornment {
+    environment { 
         packageVersion = ''
     }
      options {
@@ -15,14 +15,14 @@ pipeline {
     stages {
         stage('Get the version') {
             steps {
-                script{
+                script {
                     def packageJson = readJSON file: 'package.json'
                     packageVersion = packageJson.version
                     echo "application version: $packageVersion"
                 }
             }
         }
-        stage('Test') {
+        stage('Build') {
             steps {
                 echo 'Testing..'
             }
