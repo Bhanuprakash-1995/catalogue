@@ -49,6 +49,7 @@ pipeline {
     post { 
         always { 
             echo 'I will always get executed irrespective of the pipeline status!'
+            deleteDir()
         }
         failure { 
             echo 'This runs when pipeline is failed, used to send some alerts using slack..etc'
