@@ -4,7 +4,7 @@
 //below is the syntax to call the share libraries
 @Library('roboshop-shared-library') _
 
-// resposibility to pass what types of application and component is the piplineDesicion
+//  resposibility to pass what types of application and component is the piplineDesicion
 
 def configMap = [
     application: "nodejsVM",
